@@ -17,9 +17,10 @@
 [core]
   excludesfile = ~/.gitignore
   autocrlf = input
-[merge]
-  ff = only
 [include]
   path = .gitconfig.local
 [commit]
   template = ~/.gitmessage
+[user]
+	name = Gerard Cahill
+	email = gerard.cahill@gmail.com

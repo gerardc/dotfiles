@@ -10,11 +10,11 @@ alias -g G='| grep'
 alias -g M='| less'
 alias -g L='| wc -l'
 alias -g ONE="| awk '{ print \$1}'"
-alias e="$EDITOR"
-alias v="$VISUAL"
+alias e="$editor"
+alias v="$visual"
 
 # git
-alias gci="git pull --rebase && rake && git push"
+# alias gci="git pull --rebase && rake && git push"
 
 # Bundler
 alias b="bundle"
@@ -28,7 +28,7 @@ alias gi="gem install"
 alias giv="gem install -v"
 
 # Rails
-alias migrate="rake db:migrate db:rollback && rake db:migrate db:test:prepare"
+# alias migrate="rake db:migrate db:rollback && rake db:migrate db:test:prepare"
 alias m="migrate"
 alias rk="rake"
 alias s="rspec"

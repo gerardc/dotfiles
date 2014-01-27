@@ -1,5 +1,5 @@
 " Leader
-let mapleader = ","
+let mapleader = " "
 
 set backspace=2   " Backspace deletes like most programs in insert mode
 set nocompatible  " Use Vim settings, rather then Vi settings
@@ -12,6 +12,7 @@ set showcmd       " display incomplete commands
 set incsearch     " do incremental searching
 set laststatus=2  " Always display the status line
 set autowrite     " Automatically :write before running commands
+set foldlevel=20  " No folds... ever
 
 " Switch syntax highlighting on, when the terminal has colors
 " Also switch on highlighting the last used search pattern.
@@ -87,7 +88,7 @@ set numberwidth=5
 nnoremap <leader>a :Ag<space>
 
 " Snippets are activated by Shift+Tab
-let g:snippetsEmu_key = "<S-Tab>"
+" let g:snippetsEmu_key = "<S-Tab>" 
 
 " Tab completion
 " will insert tab at beginning of line,
@@ -102,7 +103,7 @@ function! InsertTabWrapper()
         return "\<c-p>"
     endif
 endfunction
-inoremap <Tab> <c-r>=InsertTabWrapper()<cr>
+inoremap <S-Tab> <c-r>=InsertTabWrapper()<cr>
 
 " Exclude Javascript files in :Rtags via rails.vim due to warnings when parsing
 let g:Tlist_Ctags_Cmd="ctags --exclude='*.js'"
@@ -136,6 +137,9 @@ nnoremap <C-j> <C-w>j
 nnoremap <C-k> <C-w>k
 nnoremap <C-h> <C-w>h
 nnoremap <C-l> <C-w>l
+
+nnoremap <F5> "=strftime("%c")<CR>P
+inoremap <F5> <C-R>=strftime("%c")<CR>
 
 " configure syntastic syntax checking to check on open as well as save
 let g:syntastic_check_on_open=1

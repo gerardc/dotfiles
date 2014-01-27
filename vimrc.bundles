@@ -27,6 +27,12 @@ Bundle 'vim-scripts/tComment'
 Bundle 'rking/ag.vim'
 Bundle 'tomasr/molokai'
 
+" Snipppets
+Bundle "MarcWeber/vim-addon-mw-utils"
+Bundle "tomtom/tlib_vim"
+Bundle "garbas/vim-snipmate"
+Bundle "honza/vim-snippets"
+
 if filereadable(expand("~/.vimrc.bundles.local"))
   source ~/.vimrc.bundles.local
 endif
