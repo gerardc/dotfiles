@@ -26,6 +26,8 @@ Bundle 'vim-scripts/ctags.vim'
 Bundle 'vim-scripts/tComment'
 Bundle 'rking/ag.vim'
 Bundle 'tomasr/molokai'
+Bundle 'nono/vim-handlebars'
+Bundle 'jnwhiteh/vim-golang'
 
 " Snipppets
 Bundle "MarcWeber/vim-addon-mw-utils"
