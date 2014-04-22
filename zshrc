@@ -77,3 +77,7 @@ export PATH=".git/safe/../../bin:$PATH"
 
 # Local config
 [[ -f ~/.zshrc.local ]] && source ~/.zshrc.local
+
+source "$HOME/.rvm/scripts/rvm"
+
+PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
