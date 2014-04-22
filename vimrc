@@ -89,7 +89,7 @@ set number
 set numberwidth=5
 
 " Silver searcher
-nnoremap <leader>a :Ag<space>
+nnoremap <leader>a :Ag<space>-U<space>
 
 " Snippets are activated by Shift+Tab
 " let g:snippetsEmu_key = "<S-Tab>"
