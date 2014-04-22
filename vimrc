@@ -47,6 +47,7 @@ augroup vimrcEx
   " Set syntax highlighting for specific file types
   autocmd BufRead,BufNewFile Appraisals set filetype=ruby
   autocmd BufRead,BufNewFile *.md set filetype=markdown
+  autocmd BufRead,BufNewFile *.ru set filetype=ruby
 
   " Enable spellchecking for Markdown
   autocmd FileType markdown setlocal spell
@@ -76,7 +77,7 @@ if executable('ag')
 endif
 
 " Color scheme
-colorscheme molokai
+colorscheme github
 highlight NonText guibg=#060606
 highlight Folded  guibg=#0A0A0A guifg=#9090D0
 

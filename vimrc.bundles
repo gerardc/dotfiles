@@ -28,6 +28,7 @@ Bundle 'rking/ag.vim'
 Bundle 'tomasr/molokai'
 Bundle 'nono/vim-handlebars'
 Bundle 'jnwhiteh/vim-golang'
+Bundle 'ricardovaleriano/vim-github-theme'
 
 " Snipppets
 Bundle "MarcWeber/vim-addon-mw-utils"
