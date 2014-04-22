@@ -4,9 +4,9 @@ thoughtbot dotfiles
 Requirements
 ------------
 
-Set zsh as your login shell.
+Set zsh as your login shell:
 
-    chsh -s /bin/zsh
+    chsh -s $(which zsh)
 
 Install
 -------
@@ -20,16 +20,16 @@ updated](http://robots.thoughtbot.com/keeping-a-github-fork-updated)).
 
 Install [rcm](https://github.com/thoughtbot/rcm):
 
-    brew bundle
+    brew bundle dotfiles/Brewfile
 
 Install:
 
-    rcup -d dotfiles -x README.md -x LICENSE
+    rcup -d dotfiles -x README.md -x LICENSE -x Brewfile
 
-This will create symlinks for config files in your home directory. The
-`-x` options, which exclude the `README.md` and `LICENSE` files, are
-needed during installation but can be skipped once the `.rcrc`
-configuration file is symlinked in.
+This will create symlinks for config files in your home directory. The `-x`
+options, which exclude the `README.md`, `LICENSE`, and `Brewfile` files, are
+needed during installation but can be skipped once the `.rcrc` configuration
+file is symlinked in.
 
 You can safely run `rcup` multiple times to update:
 
@@ -64,9 +64,6 @@ Your `~/.gitconfig.local` might look like this:
       email = dan@thoughtbot.com
 
 Your `~/.zshrc.local` might look like this:
-
-    # load rbenv
-    eval "$(rbenv init -)"
 
     # recommended by brew doctor
     export PATH="/usr/local/bin:/usr/local/sbin:$PATH"
@@ -112,6 +109,11 @@ configuration:
 * Adds an `up` alias to fetch and rebase `origin/master` into the feature
   branch. Use `git up -i` for interactive rebases.
 
+[Ruby](https://www.ruby-lang.org/en/) configuration:
+
+* Add trusted binstubs to the `PATH`.
+* Load rbenv into the shell, adding shims onto our `PATH`.
+
 Shell aliases and scripts:
 
 * `b` for `bundle`.
@@ -140,5 +142,5 @@ in this project.
 Dotfiles is maintained by [thoughtbot, inc](http://thoughtbot.com/community)
 The names and logos for thoughtbot are trademarks of thoughtbot, inc.
 
-Dotfiles is © 2009-2013 thoughtbot, inc. It is free software and may be
+Dotfiles is © 2009-2014 thoughtbot, inc. It is free software and may be
 redistributed under the terms specified in the [LICENSE](LICENSE) file.
